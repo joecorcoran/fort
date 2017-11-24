@@ -67,6 +67,9 @@ class Travis
   end
 end
 
+class Brick
+end
+
 class Game < Gosu::Window
   def initialize
     super W, H
@@ -97,7 +100,7 @@ class Game < Gosu::Window
     @bg.draw(0, 0, 0, 1.3, 1.3)
     @travis.draw
     @missiles.select { |m| m.alive? }.each &:draw
-    @fail.draw(0, H / 2 - 120, 10, 1, 1, Gosu::Color::RED) unless @travis.alive?
+    @fail.draw(0, H / 2 - 120, 10, 1, 1, Gosu::Color.new(255, 225, 90, 85)) unless @travis.alive?
   end
 end
 
