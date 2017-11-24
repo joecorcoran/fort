@@ -1,7 +1,17 @@
+# Fort
+
+Protect Travis from the evil Mac Pros.
+
+```
+$ bundle
+$ ruby game.rb
+```
+
+
 To do:
 
-- [ ] Cannonballs
+- [x] Missiles
 - [ ] Bricks laid on mouse click (?)
-- [ ] Graphics
+- [x] Graphics
 - [ ] Countdown
 
