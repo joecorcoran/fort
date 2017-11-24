@@ -74,6 +74,7 @@ class Game < Gosu::Window
     @bg = Gosu::Image.new('img/bg.jpg', tileable: true)
     @travis = Travis.new
     @missiles = []
+    @fail = Gosu::Image.from_text('Game over', 120, width: W, align: :center, font: 'Source Sans Pro')
   end
 
   def update
@@ -96,6 +97,7 @@ class Game < Gosu::Window
     @bg.draw(0, 0, 0, 1.3, 1.3)
     @travis.draw
     @missiles.select { |m| m.alive? }.each &:draw
+    @fail.draw(0, H / 2 - 120, 10, 1, 1, Gosu::Color::RED) unless @travis.alive?
   end
 end
 
